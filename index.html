@@ -148,8 +148,8 @@
     <a class="t" data-en="About" data-bg="За нас" href="#about">About</a>
     <a class="t" data-en="Contact" data-bg="Контакт" href="#contact">Contact</a>
     <div class="lang-toggle">
-      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" id="btn-bg" onclick="setLang('bg')">БГ</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn active" id="btn-bg" onclick="setLang('bg')">БГ</button>
     </div>
   </div>
 </nav>
@@ -326,7 +326,7 @@
 </footer>
 
 <script>
-  let lang = 'en';
+  let lang = 'bg';
   function setLang(l) {
     lang = l;
     document.getElementById('btn-en').classList.toggle('active', l === 'en');
@@ -341,6 +341,7 @@
       if (val) el.placeholder = val;
     });
   }
+  document.addEventListener('DOMContentLoaded', () => setLang('bg'));
 </script>
 </body>
 </html>
