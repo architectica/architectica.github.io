@@ -131,13 +131,41 @@
     .divider { height: 1px; background: var(--border); margin: 0 2.5rem; }
     /* RESPONSIVE */
     @media (max-width: 680px) {
-      nav { padding: 1rem 1.2rem; }
+      nav { padding: 0.75rem 1rem; }
+      .nav-logo { font-size: 17px; }
+      .nav-links { gap: 0.75rem; }
       .nav-links a:not(.lang-toggle *) { display: none; }
-      .hero { padding: 3rem 1.5rem; }
-      .hero h1 { font-size: 32px; }
-      section { padding: 3rem 1.5rem; }
-      .about-row { grid-template-columns: 1fr; gap: 2rem; }
+      .lang-btn { padding: 0.25rem 0.6rem; font-size: 11px; }
+      .hero { min-height: auto; padding: 2rem 1.2rem; }
+      .hero-tag { font-size: 10px; margin-bottom: 0.8rem; }
+      .hero h1 { font-size: 26px; line-height: 1.25; max-width: 100%; }
+      .hero p { font-size: 14px; margin: 0.9rem 0 1.4rem; line-height: 1.6; }
+      .btn-primary, .btn-ghost { padding: 0.65rem 1.4rem; font-size: 13px; }
+      section { padding: 2.25rem 1.2rem; }
+      h2.section-title { font-size: 22px; }
+      .section-sub { font-size: 13px; margin-bottom: 1.75rem; }
+      .services-grid { gap: 10px; }
+      .service-card { padding: 1.2rem 1rem; }
+      .service-icon { width: 36px; height: 36px; font-size: 18px; margin-bottom: 0.75rem; }
+      .service-card h3 { font-size: 14px; }
+      .service-card p { font-size: 12px; }
+      .projects-list { gap: 1.75rem; }
+      .project-header { padding: 0.9rem 1rem; }
+      .project-header h3 { font-size: 16px; }
+      .project-header span { font-size: 11px; }
+      .about-row { grid-template-columns: 1fr; gap: 1.5rem; }
+      .about-text h2 { font-size: 22px; }
+      .about-text p { font-size: 13px; line-height: 1.65; }
+      .testi-card { padding: 1.2rem; }
+      .testi-card blockquote { font-size: 13px; }
+      .contact-box { padding: 1.5rem; }
       .form-row { grid-template-columns: 1fr; }
+      footer { padding: 1.75rem 1.2rem; }
+      .footer-logo { font-size: 17px; }
+      footer p { font-size: 12px; }
+    }
+    @media (max-width: 400px) {
+      .hero h1 { font-size: 22px; }
     }
   </style>
 </head>
