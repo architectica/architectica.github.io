@@ -69,8 +69,9 @@
     /* SERVICES */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
     .service-card { background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.25rem; }
-    .service-icon { width: 40px; height: 40px; background: var(--cream); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; font-size: 20px; }
-    .service-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 0.5rem; color: var(--brown-dark); }
+    .service-icon { width: 36px; height: 36px; flex-shrink: 0; background: var(--cream); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .service-head { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
+    .service-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 0; color: var(--brown-dark); }
     .service-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
     /* PORTFOLIO */
     .projects-list { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -147,8 +148,9 @@
       .section-sub { font-size: 13px; margin-bottom: 1.1rem; }
       .services-grid { gap: 8px; }
       .service-card { padding: 0.9rem 0.9rem; }
-      .service-icon { width: 32px; height: 32px; font-size: 16px; margin-bottom: 0.5rem; }
-      .service-card h3 { font-size: 14px; margin-bottom: 0.3rem; }
+      .service-icon { width: 30px; height: 30px; font-size: 15px; }
+      .service-head { gap: 0.5rem; margin-bottom: 0.3rem; }
+      .service-card h3 { font-size: 14px; margin-bottom: 0; }
       .service-card p { font-size: 12px; line-height: 1.5; }
       .projects-list { gap: 1rem; }
       .project-header { padding: 0.75rem 0.9rem; }
@@ -202,33 +204,45 @@
   <p class="section-sub t" data-en="From a single room refresh to a full architectural transformation, we handle every detail with care." data-bg="От обновяване на единична стая до пълна архитектурна трансформация — обработваме всеки детайл с грижа.">From a single room refresh to a full architectural transformation, we handle every detail with care.</p>
   <div class="services-grid">
     <div class="service-card">
-      <div class="service-icon">🛋️</div>
-      <h3 class="t" data-en="Interior design" data-bg="Интериорен дизайн">Interior design</h3>
+      <div class="service-head">
+        <div class="service-icon">🛋️</div>
+        <h3 class="t" data-en="Interior design" data-bg="Интериорен дизайн">Interior design</h3>
+      </div>
       <p class="t" data-en="Full-room concepts, material selection, furniture layout, and styling — cohesive from floor to ceiling." data-bg="Концепции за цели стаи, избор на материали, разпределение на мебели и стилизация — съгласувани от пода до тавана.">Full-room concepts, material selection, furniture layout, and styling — cohesive from floor to ceiling.</p>
     </div>
     <div class="service-card">
-      <div class="service-icon">🏛️</div>
-      <h3 class="t" data-en="Exterior design" data-bg="Екстериорен дизайн">Exterior design</h3>
+      <div class="service-head">
+        <div class="service-icon">🏛️</div>
+        <h3 class="t" data-en="Exterior design" data-bg="Екстериорен дизайн">Exterior design</h3>
+      </div>
       <p class="t" data-en="Facades, landscaping, lighting, and outdoor living spaces that complement your architecture." data-bg="Фасади, озеленяване, осветление и открити жилищни пространства, допълващи вашата архитектура.">Facades, landscaping, lighting, and outdoor living spaces that complement your architecture.</p>
     </div>
     <div class="service-card">
-      <div class="service-icon">🖥️</div>
-      <h3 class="t" data-en="3D visualization" data-bg="3D визуализация">3D visualization</h3>
+      <div class="service-head">
+        <div class="service-icon">🖥️</div>
+        <h3 class="t" data-en="3D visualization" data-bg="3D визуализация">3D visualization</h3>
+      </div>
       <p class="t" data-en="Photorealistic renders before any work begins — see your space transformed before committing." data-bg="Фотореалистични рендери преди да започне работата — вижте трансформацията на пространството си предварително.">Photorealistic renders before any work begins — see your space transformed before committing.</p>
     </div>
     <div class="service-card">
-      <div class="service-icon">📐</div>
-      <h3 class="t" data-en="Space planning" data-bg="Планиране на пространство">Space planning</h3>
+      <div class="service-head">
+        <div class="service-icon">📐</div>
+        <h3 class="t" data-en="Space planning" data-bg="Планиране на пространство">Space planning</h3>
+      </div>
       <p class="t" data-en="Optimized layouts that maximize flow, function, and natural light for every square metre." data-bg="Оптимизирани разпределения, максимизиращи движението, функционалността и естествената светлина на всеки квадратен метър.">Optimized layouts that maximize flow, function, and natural light for every square metre.</p>
     </div>
     <div class="service-card">
-      <div class="service-icon">🎨</div>
-      <h3 class="t" data-en="Color &amp; materials" data-bg="Цветове и материали">Color &amp; materials</h3>
+      <div class="service-head">
+        <div class="service-icon">🎨</div>
+        <h3 class="t" data-en="Color &amp; materials" data-bg="Цветове и материали">Color &amp; materials</h3>
+      </div>
       <p class="t" data-en="Curated palettes, textures, and finishes — chosen to age beautifully and suit your lifestyle." data-bg="Подбрани палитри, текстури и покрития — избрани да остаряват красиво и да отговарят на вашия начин на живот.">Curated palettes, textures, and finishes — chosen to age beautifully and suit your lifestyle.</p>
     </div>
     <div class="service-card">
-      <div class="service-icon">🔧</div>
-      <h3 class="t" data-en="Project management" data-bg="Управление на проекти">Project management</h3>
+      <div class="service-head">
+        <div class="service-icon">🔧</div>
+        <h3 class="t" data-en="Project management" data-bg="Управление на проекти">Project management</h3>
+      </div>
       <p class="t" data-en="Coordinating contractors, suppliers, and timelines so your project is delivered on time." data-bg="Координиране на изпълнители, доставчици и срокове, за да бъде проектът ви завършен навреме.">Coordinating contractors, suppliers, and timelines so your project is delivered on time.</p>
     </div>
   </div>
