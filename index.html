@@ -39,7 +39,7 @@
     .lang-btn { padding: 0.3rem 0.75rem; font-size: 12px; cursor: pointer; background: transparent; border: none; color: var(--text-muted); font-family: 'Inter', sans-serif; transition: background 0.15s, color 0.15s; }
     .lang-btn.active { background: var(--brown-dark); color: #fff; }
     /* SECTIONS */
-    section { padding: 5rem 2.5rem; }
+    section { padding: 3.5rem 2.5rem; }
     /* HERO */
     .hero {
       min-height: 480px; display: flex; flex-direction: column; justify-content: center;
@@ -65,15 +65,15 @@
     .btn-ghost:hover { background: rgba(59,42,32,0.07); }
     /* HEADINGS */
     h2.section-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; color: var(--brown-dark); margin-bottom: 0.6rem; }
-    .section-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 3rem; max-width: 540px; line-height: 1.75; }
+    .section-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 1.75rem; max-width: 540px; line-height: 1.75; }
     /* SERVICES */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-    .service-card { background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem 1.5rem; }
-    .service-icon { width: 44px; height: 44px; background: var(--cream); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; font-size: 22px; }
+    .service-card { background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.25rem; }
+    .service-icon { width: 40px; height: 40px; background: var(--cream); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; font-size: 20px; }
     .service-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 0.5rem; color: var(--brown-dark); }
     .service-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
     /* PORTFOLIO */
-    .projects-list { display: flex; flex-direction: column; gap: 3rem; }
+    .projects-list { display: flex; flex-direction: column; gap: 1.5rem; }
     .project-block { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
     .project-header { padding: 1.25rem 1.5rem; background: var(--surface-alt); display: flex; justify-content: space-between; align-items: center; }
     .project-header h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: var(--brown-dark); }
@@ -129,6 +129,7 @@
     footer p { font-size: 13px; color: rgba(232,217,204,0.55); margin-top: 0.3rem; }
     /* DIVIDER */
     .divider { height: 1px; background: var(--border); margin: 0 2.5rem; }
+    @media (max-width: 680px) { .divider { margin: 0 1.2rem; } }
     /* RESPONSIVE */
     @media (max-width: 680px) {
       nav { padding: 0.75rem 1rem; }
@@ -141,16 +142,16 @@
       .hero h1 { font-size: 26px; line-height: 1.25; max-width: 100%; }
       .hero p { font-size: 14px; margin: 0.9rem 0 1.4rem; line-height: 1.6; }
       .btn-primary, .btn-ghost { padding: 0.65rem 1.4rem; font-size: 13px; }
-      section { padding: 2.25rem 1.2rem; }
-      h2.section-title { font-size: 22px; }
-      .section-sub { font-size: 13px; margin-bottom: 1.75rem; }
-      .services-grid { gap: 10px; }
-      .service-card { padding: 1.2rem 1rem; }
-      .service-icon { width: 36px; height: 36px; font-size: 18px; margin-bottom: 0.75rem; }
-      .service-card h3 { font-size: 14px; }
-      .service-card p { font-size: 12px; }
-      .projects-list { gap: 1.75rem; }
-      .project-header { padding: 0.9rem 1rem; }
+      section { padding: 1.75rem 1.2rem; }
+      h2.section-title { font-size: 22px; margin-bottom: 0.4rem; }
+      .section-sub { font-size: 13px; margin-bottom: 1.1rem; }
+      .services-grid { gap: 8px; }
+      .service-card { padding: 0.9rem 0.9rem; }
+      .service-icon { width: 32px; height: 32px; font-size: 16px; margin-bottom: 0.5rem; }
+      .service-card h3 { font-size: 14px; margin-bottom: 0.3rem; }
+      .service-card p { font-size: 12px; line-height: 1.5; }
+      .projects-list { gap: 1rem; }
+      .project-header { padding: 0.75rem 0.9rem; }
       .project-header h3 { font-size: 16px; }
       .project-header span { font-size: 11px; }
       .about-row { grid-template-columns: 1fr; gap: 1.5rem; }
