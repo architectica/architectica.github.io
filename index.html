@@ -98,7 +98,7 @@
     /* ABOUT */
     #about { background: var(--surface-alt); }
     .about-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1000px; margin: 0 auto; }
-    .about-img-placeholder { background: var(--cream-dark); border-radius: 12px; height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--brown-light); gap: 0.5rem; font-size: 13px; }
+    .about-img-placeholder { background: var(--cream-dark); border-radius: 12px; aspect-ratio: 1.4/1; max-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--brown-light); gap: 0.5rem; font-size: 13px; }
     .about-text h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--brown-dark); margin-bottom: 1.2rem; }
     .about-text p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
     /* TESTIMONIALS */
@@ -312,7 +312,7 @@
 <section id="about">
   <div class="about-row">
     <div class="about-img-placeholder" style="background:#a7795f;">
-      <img src="images/logo.jpg" alt="Architectica" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;" />
+      <img src="images/logo.jpg" alt="Architectica" style="width:100%;height:100%;object-fit:contain;padding:16px;box-sizing:border-box;border-radius:inherit;" />
     </div>
     <div class="about-text">
       <h2 class="t" data-en="Designed with warmth, built with intention" data-bg="Проектирано с топлота, изградено с намерение">Designed with warmth, built with intention</h2>
