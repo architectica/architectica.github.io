@@ -415,39 +415,42 @@
   <h2 class="section-title t" style="text-align:center;" data-en="Let's start your project" data-bg="Нека започнем вашия проект">Let's start your project</h2>
   <p class="section-sub t" style="text-align:center; margin-left:auto; margin-right:auto;" data-en="Tell us about your space and we'll be in touch within 24 hours." data-bg="Разкажете ни за вашето пространство и ще се свържем с вас в рамките на 24 часа.">Tell us about your space and we'll be in touch within 24 hours.</p>
   <div class="contact-box">
-    <div class="form-row">
-      <div class="form-field">
-        <label class="t" data-en="First name" data-bg="Име">First name</label>
-        <input type="text" class="t-ph" data-en="Ana" data-bg="Ана" placeholder="Ana" />
+    <form id="contact-form">
+      <div class="form-row">
+        <div class="form-field">
+          <label class="t" data-en="First name" data-bg="Име">First name</label>
+          <input type="text" name="First name" class="t-ph" data-en="Ana" data-bg="Ана" placeholder="Ana" required />
+        </div>
+        <div class="form-field">
+          <label class="t" data-en="Last name" data-bg="Фамилия">Last name</label>
+          <input type="text" name="Last name" class="t-ph" data-en="Petrova" data-bg="Петрова" placeholder="Petrova" required />
+        </div>
       </div>
       <div class="form-field">
-        <label class="t" data-en="Last name" data-bg="Фамилия">Last name</label>
-        <input type="text" class="t-ph" data-en="Petrova" data-bg="Петрова" placeholder="Petrova" />
+        <label class="t" data-en="Email" data-bg="Имейл">Email</label>
+        <input type="email" name="Email" placeholder="ana@example.com" required />
       </div>
-    </div>
-    <div class="form-field">
-      <label class="t" data-en="Email" data-bg="Имейл">Email</label>
-      <input type="email" placeholder="ana@example.com" />
-    </div>
-    <div class="form-field">
-      <label class="t" data-en="Phone (optional)" data-bg="Телефон (по желание)">Phone (optional)</label>
-      <input type="tel" placeholder="+359 ..." />
-    </div>
-    <div class="form-field">
-      <label class="t" data-en="Service interested in" data-bg="Услуга, която ви интересува">Service interested in</label>
-      <select>
-        <option class="t" data-en="Interior design" data-bg="Интериорен дизайн">Interior design</option>
-        <option class="t" data-en="Exterior design" data-bg="Екстериорен дизайн">Exterior design</option>
-        <option class="t" data-en="3D visualization" data-bg="3D визуализация">3D visualization</option>
-        <option class="t" data-en="Space planning" data-bg="Планиране на пространство">Space planning</option>
-        <option class="t" data-en="Full project" data-bg="Пълен проект">Full project</option>
-      </select>
-    </div>
-    <div class="form-field">
-      <label class="t" data-en="Tell us about your project" data-bg="Разкажете ни за вашия проект">Tell us about your project</label>
-      <textarea class="t-ph" data-en="A brief description of your space, goals, and timeline..." data-bg="Кратко описание на вашето пространство, цели и срокове..." placeholder="A brief description of your space, goals, and timeline..."></textarea>
-    </div>
-    <button class="btn-primary form-submit t" data-en="Send message" data-bg="Изпратете съобщение">Send message</button>
+      <div class="form-field">
+        <label class="t" data-en="Phone (optional)" data-bg="Телефон (по желание)">Phone (optional)</label>
+        <input type="tel" name="Phone" placeholder="+359 ..." />
+      </div>
+      <div class="form-field">
+        <label class="t" data-en="Service interested in" data-bg="Услуга, която ви интересува">Service interested in</label>
+        <select name="Service">
+          <option class="t" data-en="Interior design" data-bg="Интериорен дизайн">Interior design</option>
+          <option class="t" data-en="Exterior design" data-bg="Екстериорен дизайн">Exterior design</option>
+          <option class="t" data-en="3D visualization" data-bg="3D визуализация">3D visualization</option>
+          <option class="t" data-en="Space planning" data-bg="Планиране на пространство">Space planning</option>
+          <option class="t" data-en="Full project" data-bg="Пълен проект">Full project</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label class="t" data-en="Tell us about your project" data-bg="Разкажете ни за вашия проект">Tell us about your project</label>
+        <textarea name="Message" class="t-ph" data-en="A brief description of your space, goals, and timeline..." data-bg="Кратко описание на вашето пространство, цели и срокове..." placeholder="A brief description of your space, goals, and timeline..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary form-submit t" data-en="Send message" data-bg="Изпратете съобщение">Send message</button>
+      <p id="form-status" class="t" style="margin-top:0.9rem; font-size:13.5px; text-align:center; display:none;"></p>
+    </form>
   </div>
 </section>
 <!-- FOOTER -->
@@ -511,6 +514,51 @@
     if (e.key === 'ArrowRight') lbNav(1);
     if (e.key === 'ArrowLeft') lbNav(-1);
     if (e.key === 'Escape') closeLbDirect();
+  });
+</script>
+<script>
+  // CONTACT FORM — sends submissions to stan@klarvis.com via Formspree.
+  // Replace FORM_ID below with your real Formspree form ID (see setup notes).
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwvgzqlp';
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  const statusMsgs = {
+    sending: { en: 'Sending…', bg: 'Изпращане…' },
+    success: { en: "Thanks — we'll be in touch within 24 hours.", bg: 'Благодарим — ще се свържем с вас в рамките на 24 часа.' },
+    error: { en: 'Something went wrong. Please email us directly instead.', bg: 'Възникна грешка. Моля, пишете ни директно на имейл.' },
+    notConfigured: { en: 'Form is not fully set up yet — please email us directly for now.', bg: 'Формата все още не е напълно настроена — моля, пишете ни директно на имейл засега.' }
+  };
+  function showStatus(key) {
+    formStatus.style.display = 'block';
+    formStatus.textContent = statusMsgs[key][lang] || statusMsgs[key].en;
+    formStatus.style.color = key === 'success' ? '#3B7A4E' : (key === 'sending' ? 'var(--text-muted)' : '#B23A3A');
+  }
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (FORMSPREE_ENDPOINT.includes('FORM_ID')) {
+      showStatus('notConfigured');
+      return;
+    }
+    const submitBtn = contactForm.querySelector('.form-submit');
+    submitBtn.disabled = true;
+    showStatus('sending');
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(contactForm)
+      });
+      if (res.ok) {
+        showStatus('success');
+        contactForm.reset();
+      } else {
+        showStatus('error');
+      }
+    } catch (err) {
+      showStatus('error');
+    } finally {
+      submitBtn.disabled = false;
+    }
   });
 </script>
 </body>
