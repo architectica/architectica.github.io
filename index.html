@@ -25,7 +25,6 @@
     }
     body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; }
     a { text-decoration: none; color: inherit; }
-
     /* NAV */
     nav {
       display: flex; justify-content: space-between; align-items: center;
@@ -39,10 +38,8 @@
     .lang-toggle { display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-left: 0.5rem; }
     .lang-btn { padding: 0.3rem 0.75rem; font-size: 12px; cursor: pointer; background: transparent; border: none; color: var(--text-muted); font-family: 'Inter', sans-serif; transition: background 0.15s, color 0.15s; }
     .lang-btn.active { background: var(--brown-dark); color: #fff; }
-
     /* SECTIONS */
     section { padding: 5rem 2.5rem; }
-
     /* HERO */
     .hero {
       min-height: 480px; display: flex; flex-direction: column; justify-content: center;
@@ -52,7 +49,6 @@
     .hero h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; line-height: 1.15; color: var(--brown-dark); max-width: 580px; }
     .hero p { font-size: 17px; color: var(--brown-mid); margin: 1.4rem 0 2.2rem; max-width: 500px; line-height: 1.75; }
     .hero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-
     /* BUTTONS */
     .btn-primary {
       background: var(--brown-dark); color: #fff; border: none;
@@ -67,18 +63,15 @@
       font-family: 'Inter', sans-serif; transition: background 0.2s;
     }
     .btn-ghost:hover { background: rgba(59,42,32,0.07); }
-
     /* HEADINGS */
     h2.section-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; color: var(--brown-dark); margin-bottom: 0.6rem; }
     .section-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 3rem; max-width: 540px; line-height: 1.75; }
-
     /* SERVICES */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
     .service-card { background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem 1.5rem; }
     .service-icon { width: 44px; height: 44px; background: var(--cream); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; font-size: 22px; }
     .service-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 0.5rem; color: var(--brown-dark); }
     .service-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
-
     /* PORTFOLIO */
     .projects-list { display: flex; flex-direction: column; gap: 3rem; }
     .project-block { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
@@ -102,14 +95,12 @@
     .lb-prev, .lb-next { position: fixed; top: 50%; transform: translateY(-50%); color: #fff; font-size: 40px; cursor: pointer; z-index: 1000; padding: 0 1rem; user-select: none; }
     .lb-prev { left: 0; } .lb-next { right: 0; }
     .lb-counter { position: fixed; bottom: 1.2rem; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.6); font-size: 13px; }
-
     /* ABOUT */
     #about { background: var(--surface-alt); }
     .about-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1000px; margin: 0 auto; }
     .about-img-placeholder { background: var(--cream-dark); border-radius: 12px; height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--brown-light); gap: 0.5rem; font-size: 13px; }
     .about-text h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--brown-dark); margin-bottom: 1.2rem; }
     .about-text p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
-
     /* TESTIMONIALS */
     .testimonials { background: var(--cream); }
     .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 2rem; }
@@ -117,7 +108,6 @@
     .stars { color: var(--accent); font-size: 14px; margin-bottom: 0.85rem; }
     .testi-card blockquote { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
     .testi-author { font-size: 13px; font-weight: 500; color: var(--brown-dark); }
-
     /* CONTACT */
     #contact { background: #fff; }
     .contact-box { background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; max-width: 580px; margin: 0 auto; }
@@ -133,15 +123,12 @@
     .form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--brown-light); }
     .form-field textarea { height: 110px; resize: vertical; }
     .form-submit { margin-top: 1.25rem; width: 100%; font-size: 15px; padding: 0.9rem; }
-
     /* FOOTER */
     footer { background: var(--brown-dark); color: #e8d9cc; padding: 2.5rem; text-align: center; }
     .footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 0.5rem; }
     footer p { font-size: 13px; color: rgba(232,217,204,0.55); margin-top: 0.3rem; }
-
     /* DIVIDER */
     .divider { height: 1px; background: var(--border); margin: 0 2.5rem; }
-
     /* RESPONSIVE */
     @media (max-width: 680px) {
       nav { padding: 1rem 1.2rem; }
@@ -155,7 +142,6 @@
   </style>
 </head>
 <body>
-
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Architectica</div>
@@ -171,7 +157,6 @@
     </div>
   </div>
 </nav>
-
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-tag t" data-en="Interior &amp; Exterior Design" data-bg="Интериорен и екстериорен дизайн">Interior &amp; Exterior Design</div>
@@ -182,7 +167,6 @@
     <a href="#contact"><button class="btn-ghost t" data-en="Get in touch" data-bg="Свържете се с нас">Get in touch</button></a>
   </div>
 </section>
-
 <!-- SERVICES -->
 <section id="services">
   <h2 class="section-title t" data-en="What we do" data-bg="Какво правим">What we do</h2>
@@ -220,14 +204,11 @@
     </div>
   </div>
 </section>
-
 <div class="divider"></div>
-
 <!-- PORTFOLIO -->
 <section id="portfolio">
   <h2 class="section-title t" data-en="Selected projects" data-bg="Избрани проекти">Selected projects</h2>
   <p class="section-sub t" data-en="A glimpse of our recent work across residential and commercial spaces." data-bg="Поглед към нашата скорошна работа в жилищни и търговски пространства.">A glimpse of our recent work across residential и commercial spaces.</p>
-
   <div class="projects-list">
     <div class="project-block">
       <div class="project-header">
@@ -264,7 +245,6 @@
         </div>
       </div>
     </div>
-
     <div class="project-block">
       <div class="project-header">
         <h3 class="t" data-en="Mountain villa, Samokov" data-bg="Планинска вила, Самоков">Планинска вила, Самоков</h3>
@@ -306,7 +286,6 @@
         </div>
       </div>
     </div>
-
     <div class="other-projects">
       <div class="portfolio-item">
         <div class="portfolio-img" style="background: linear-gradient(150deg,#c8bfae,#6a5e4e);">
@@ -321,7 +300,6 @@
     </div>
   </div>
 </section>
-
 <div class="lightbox" id="lightbox" onclick="closeLb(event)">
   <span class="lb-close" onclick="closeLbDirect()">&times;</span>
   <span class="lb-prev" onclick="lbNav(-1)">&#8249;</span>
@@ -329,9 +307,7 @@
   <span class="lb-next" onclick="lbNav(1)">&#8250;</span>
   <span class="lb-counter" id="lb-counter"></span>
 </div>
-
 <div class="divider"></div>
-
 <!-- ABOUT -->
 <section id="about">
   <div class="about-row">
@@ -347,7 +323,6 @@
     </div>
   </div>
 </section>
-
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
   <h2 class="section-title t" data-en="What clients say" data-bg="Какво казват клиентите">What clients say</h2>
@@ -370,9 +345,7 @@
     </div>
   </div>
 </section>
-
 <div class="divider"></div>
-
 <!-- CONTACT -->
 <section id="contact">
   <h2 class="section-title t" style="text-align:center;" data-en="Let's start your project" data-bg="Нека започнем вашия проект">Let's start your project</h2>
@@ -413,14 +386,12 @@
     <button class="btn-primary form-submit t" data-en="Send message" data-bg="Изпратете съобщение">Send message</button>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Architectica</div>
   <p class="t" data-en="Interior &amp; Exterior Design · Bulgaria" data-bg="Интериорен и екстериорен дизайн · България">Interior &amp; Exterior Design · Bulgaria</p>
   <p>© 2026 Architectica ЕООД. <span class="t" data-en="All rights reserved." data-bg="Всички права запазени.">All rights reserved.</span></p>
 </footer>
-
 <script>
   let lang = 'bg';
   function setLang(l) {
