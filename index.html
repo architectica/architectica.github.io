@@ -38,6 +38,7 @@
     .lang-toggle { display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-left: 0.5rem; }
     .lang-btn { padding: 0.3rem 0.75rem; font-size: 12px; cursor: pointer; background: transparent; border: none; color: var(--text-muted); font-family: 'Inter', sans-serif; transition: background 0.15s, color 0.15s; }
     .lang-btn.active { background: var(--brown-dark); color: #fff; }
+    .menu-toggle { display: none; }
     /* SECTIONS */
     section { padding: 3.5rem 2.5rem; }
     /* HERO */
@@ -133,42 +134,69 @@
     @media (max-width: 680px) { .divider { margin: 0 1.2rem; } }
     /* RESPONSIVE */
     @media (max-width: 680px) {
-      nav { padding: 0.75rem 1rem; }
-      .nav-logo { font-size: 17px; }
-      .nav-links { gap: 0.75rem; }
-      .nav-links a:not(.lang-toggle *) { display: none; }
-      .lang-btn { padding: 0.25rem 0.6rem; font-size: 11px; }
-      .hero { min-height: auto; padding: 2rem 1.2rem; }
-      .hero-tag { font-size: 10px; margin-bottom: 0.8rem; }
-      .hero h1 { font-size: 26px; line-height: 1.25; max-width: 100%; }
-      .hero p { font-size: 14px; margin: 0.9rem 0 1.4rem; line-height: 1.6; }
-      .btn-primary, .btn-ghost { padding: 0.65rem 1.4rem; font-size: 13px; }
-      section { padding: 1.75rem 1.2rem; }
-      h2.section-title { font-size: 22px; margin-bottom: 0.4rem; }
-      .section-sub { font-size: 13px; margin-bottom: 1.1rem; }
-      .services-grid { gap: 8px; }
-      .service-card { padding: 0.9rem 0.9rem; }
-      .service-icon { width: 30px; height: 30px; font-size: 15px; }
-      .service-head { gap: 0.5rem; margin-bottom: 0.3rem; }
-      .service-card h3 { font-size: 14px; margin-bottom: 0; }
-      .service-card p { font-size: 12px; line-height: 1.5; }
-      .projects-list { gap: 1rem; }
-      .project-header { padding: 0.75rem 0.9rem; }
-      .project-header h3 { font-size: 16px; }
-      .project-header span { font-size: 11px; }
+      nav { padding: 0.85rem 1rem; position: relative; }
+      .nav-logo { font-size: 18px; }
+      .nav-links { gap: 0.6rem; }
+      .nav-links a:not(.lang-toggle *) {
+        display: none;
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 0.25rem 0;
+      }
+      .nav-links.menu-open a:not(.lang-toggle *) { display: flex; }
+      .nav-links.menu-open { flex-wrap: wrap; }
+      .nav-links a:not(.lang-toggle *) {
+        font-size: 16px; padding: 0.85rem 1.2rem;
+        border-bottom: 1px solid var(--border); width: 100%;
+      }
+      .nav-links a:not(.lang-toggle *):last-of-type { border-bottom: none; }
+      .menu-toggle {
+        display: flex; align-items: center; justify-content: center;
+        width: 40px; height: 40px; background: transparent; border: none;
+        cursor: pointer; order: -1; margin-right: 0.4rem;
+      }
+      .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+        content: ''; display: block; width: 20px; height: 2px;
+        background: var(--brown-dark); position: relative; transition: 0.2s;
+      }
+      .menu-toggle span::before { position: absolute; top: -6px; }
+      .menu-toggle span::after { position: absolute; top: 6px; }
+      .lang-btn { padding: 0.4rem 0.8rem; font-size: 13px; }
+      .hero { min-height: auto; padding: 2.25rem 1.2rem; }
+      .hero-tag { font-size: 11.5px; margin-bottom: 0.9rem; }
+      .hero h1 { font-size: 28px; line-height: 1.3; max-width: 100%; }
+      .hero p { font-size: 16px; margin: 1rem 0 1.5rem; line-height: 1.65; }
+      .btn-primary, .btn-ghost { padding: 0.75rem 1.4rem; font-size: 15px; }
+      section { padding: 2rem 1.2rem; }
+      h2.section-title { font-size: 24px; margin-bottom: 0.5rem; }
+      .section-sub { font-size: 15px; line-height: 1.65; margin-bottom: 1.25rem; }
+      .services-grid { gap: 10px; }
+      .service-card { padding: 1rem 1rem; }
+      .service-icon { width: 32px; height: 32px; font-size: 16px; }
+      .service-head { gap: 0.55rem; margin-bottom: 0.4rem; }
+      .service-card h3 { font-size: 16px; margin-bottom: 0; }
+      .service-card p { font-size: 14px; line-height: 1.6; }
+      .projects-list { gap: 1.1rem; }
+      .project-header { padding: 0.85rem 1rem; }
+      .project-header h3 { font-size: 17px; }
+      .project-header span { font-size: 12.5px; }
       .about-row { grid-template-columns: 1fr; gap: 1.5rem; }
-      .about-text h2 { font-size: 22px; }
-      .about-text p { font-size: 13px; line-height: 1.65; }
-      .testi-card { padding: 1.2rem; }
-      .testi-card blockquote { font-size: 13px; }
+      .about-text h2 { font-size: 23px; }
+      .about-text p { font-size: 15px; line-height: 1.7; }
+      .testi-card { padding: 1.3rem; }
+      .testi-card blockquote { font-size: 14.5px; line-height: 1.65; }
+      .testi-author { font-size: 13.5px; }
       .contact-box { padding: 1.5rem; }
       .form-row { grid-template-columns: 1fr; }
-      footer { padding: 1.75rem 1.2rem; }
-      .footer-logo { font-size: 17px; }
-      footer p { font-size: 12px; }
+      .form-field label { font-size: 14px; }
+      .form-field input, .form-field textarea, .form-field select { font-size: 16px; padding: 0.75rem 0.9rem; }
+      footer { padding: 2rem 1.2rem; }
+      .footer-logo { font-size: 18px; }
+      footer p { font-size: 13px; }
     }
     @media (max-width: 400px) {
-      .hero h1 { font-size: 22px; }
+      .hero h1 { font-size: 24px; }
     }
   </style>
 </head>
@@ -176,7 +204,8 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Architectica</div>
-  <div class="nav-links">
+  <div class="nav-links" id="nav-links">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
     <a class="t" data-en="Home" data-bg="Начало" href="#hero">Home</a>
     <a class="t" data-en="Services" data-bg="Услуги" href="#services">Services</a>
     <a class="t" data-en="Portfolio" data-bg="Портфолио" href="#portfolio">Portfolio</a>
@@ -490,6 +519,20 @@
     });
   }
   document.addEventListener('DOMContentLoaded', () => setLang('bg'));
+</script>
+<script>
+  const navLinks = document.getElementById('nav-links');
+  const menuToggle = document.getElementById('menu-toggle');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('menu-open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 </script>
 <script>
   const lbImages = [
