@@ -265,12 +265,49 @@
       </div>
     </div>
 
-    <div class="other-projects">
-      <div class="portfolio-item">
-        <div class="portfolio-img" style="background: linear-gradient(150deg,#a8bfb0,#4a6e5e);">
-          <span class="portfolio-label t" data-en="Mountain villa, Samokov" data-bg="Планинска вила, Самоков">Планинска вила, Самоков</span>
+    <div class="project-block">
+      <div class="project-header">
+        <h3 class="t" data-en="Mountain villa, Samokov" data-bg="Планинска вила, Самоков">Планинска вила, Самоков</h3>
+        <span class="t" data-en="Interior &amp; Exterior · 2026" data-bg="Интериор и екстериор · 2026">Интериор и екстериор · 2026</span>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-main" onclick="openLb(9)">
+          <img src="images/samokov-01.jpg" alt="Планинска вила — фасада" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(10)">
+          <img src="images/samokov-02.jpg" alt="Планинска вила — задна фасада" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(11)">
+          <img src="images/samokov-03.jpg" alt="Планинска вила — изглед отгоре" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(12)">
+          <img src="images/samokov-04.jpg" alt="Дневна" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(13)">
+          <img src="images/samokov-05.jpg" alt="Кухня и дневна" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(14)">
+          <img src="images/samokov-06.jpg" alt="Кухня" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(15)">
+          <img src="images/samokov-07.jpg" alt="Спалня" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(16)">
+          <img src="images/samokov-08.jpg" alt="Баня" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(17)">
+          <img src="images/samokov-09.jpg" alt="План отгоре" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(18)">
+          <img src="images/samokov-10.jpg" alt="Едноетажна вила във фасада" loading="lazy" />
+        </div>
+        <div class="photo-thumb" onclick="openLb(19)">
+          <img src="images/samokov-11.jpg" alt="Втора спалня" loading="lazy" />
         </div>
       </div>
+    </div>
+
+    <div class="other-projects">
       <div class="portfolio-item">
         <div class="portfolio-img" style="background: linear-gradient(150deg,#c8bfae,#6a5e4e);">
           <span class="portfolio-label t" data-en="Boutique office, Pernik" data-bg="Бутиков офис, Перник">Бутиков офис, Перник</span>
@@ -407,7 +444,11 @@
   const lbImages = [
     'images/sofia-08.jpg','images/sofia-01.jpg','images/sofia-03.jpg',
     'images/sofia-07.jpg','images/sofia-05.jpg','images/sofia-02.jpg',
-    'images/sofia-06.jpg','images/sofia-04.jpg','images/sofia-09.jpg'
+    'images/sofia-06.jpg','images/sofia-04.jpg','images/sofia-09.jpg',
+    'images/samokov-01.jpg','images/samokov-02.jpg','images/samokov-03.jpg',
+    'images/samokov-04.jpg','images/samokov-05.jpg','images/samokov-06.jpg',
+    'images/samokov-07.jpg','images/samokov-08.jpg','images/samokov-09.jpg',
+    'images/samokov-10.jpg','images/samokov-11.jpg'
   ];
   let lbIdx = 0;
   function openLb(i) {
