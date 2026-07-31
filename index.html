@@ -33,6 +33,7 @@
     }
     .nav-logo { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--brown-dark); letter-spacing: 0.02em; }
     .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-menu-list { display: flex; gap: 1.5rem; align-items: center; }
     .nav-links a { font-size: 14px; color: var(--text-muted); cursor: pointer; transition: color 0.2s; }
     .nav-links a:hover { color: var(--brown-dark); }
     .lang-toggle { display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-left: 0.5rem; }
@@ -145,20 +146,22 @@
       nav { padding: 0.85rem 1rem; position: relative; }
       .nav-logo { font-size: 18px; }
       .nav-links { gap: 0.6rem; }
-      .nav-links a:not(.lang-toggle *) {
+      .nav-menu-list {
         display: none;
+      }
+      .nav-links.menu-open .nav-menu-list {
+        display: flex;
         position: absolute; top: 100%; left: 0; right: 0;
         flex-direction: column; background: #fff;
         border-bottom: 1px solid var(--border);
         padding: 0.25rem 0;
+        z-index: 50;
       }
-      .nav-links.menu-open a:not(.lang-toggle *) { display: flex; }
-      .nav-links.menu-open { flex-wrap: wrap; }
-      .nav-links a:not(.lang-toggle *) {
+      .nav-menu-list a {
         font-size: 16px; padding: 0.85rem 1.2rem;
         border-bottom: 1px solid var(--border); width: 100%;
       }
-      .nav-links a:not(.lang-toggle *):last-of-type { border-bottom: none; }
+      .nav-menu-list a:last-of-type { border-bottom: none; }
       .menu-toggle {
         display: flex; align-items: center; justify-content: center;
         width: 40px; height: 40px; background: transparent; border: none;
@@ -214,12 +217,14 @@
   <div class="nav-logo">Architectica</div>
   <div class="nav-links" id="nav-links">
     <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
-    <a class="t" data-en="Home" data-bg="Начало" href="#hero">Home</a>
-    <a class="t" data-en="What we do" data-bg="Какво правим" href="#services">What we do</a>
-    <a class="t" data-en="Selected projects" data-bg="Избрани проекти" href="#portfolio">Selected projects</a>
-    <a class="t" data-en="About" data-bg="За нас" href="#about">About</a>
-    <a class="t" data-en="3D visualization advantages" data-bg="Предимствата на 3D визуализацията" href="#advantages">3D visualization advantages</a>
-    <a class="t" data-en="Contact" data-bg="Контакт" href="#contact">Contact</a>
+    <div class="nav-menu-list" id="nav-menu-list">
+      <a class="t" data-en="Home" data-bg="Начало" href="#hero">Home</a>
+      <a class="t" data-en="What we do" data-bg="Какво правим" href="#services">What we do</a>
+      <a class="t" data-en="Selected projects" data-bg="Избрани проекти" href="#portfolio">Selected projects</a>
+      <a class="t" data-en="About" data-bg="За нас" href="#about">About</a>
+      <a class="t" data-en="3D visualization advantages" data-bg="Предимствата на 3D визуализацията" href="#advantages">3D visualization advantages</a>
+      <a class="t" data-en="Contact" data-bg="Контакт" href="#contact">Contact</a>
+    </div>
     <div class="lang-toggle">
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn active" id="btn-bg" onclick="setLang('bg')">БГ</button>
